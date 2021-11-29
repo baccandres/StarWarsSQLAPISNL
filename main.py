@@ -1,7 +1,7 @@
 from flask import Flask, request
 from flask import jsonify
 import tools.sqltools as sqt
-import markdown.extensions.fenced_code
+
 
 app = Flask(__name__)
 
@@ -28,6 +28,7 @@ def gimme_sentiment(character):
 def newCharacter():
     x = request.form.get("Campo")
     return sqt.insertCharacter(x)
+
 
 
 
